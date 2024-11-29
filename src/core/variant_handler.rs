@@ -325,6 +325,9 @@ pub fn handle(bot: Arc<Bot>, _: &TankPacket, data: &[u8]) {
         "OnFailedToEnterWorld" => {
             bot.state.lock().unwrap().is_allowed_to_warp = true;
         }
+        "OnFailedToEnterWorld" => {
+            bot.state.lock().unwrap().is_allowed_to_warp = true;
+        }
         _ => {}
     }
 }
